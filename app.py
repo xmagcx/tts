@@ -14,12 +14,12 @@ app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 @app.get("/")
-def home():
+async def home():
     return {"<b> It's works </b>"}
 
 
 @app.get("/audio/", status_code=200)
-def audio(context: str,lang: str):
+async def audio(context: str,lang: str):
     try:
           
         tts = gTTS(text=context, lang=lang)

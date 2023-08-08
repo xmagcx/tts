@@ -8,3 +8,4 @@ prueba.txt
 *.wav
 execute
 consume.py
+Dockerfile

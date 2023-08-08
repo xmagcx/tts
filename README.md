@@ -13,12 +13,12 @@
 - using python
   ```
   python3 pip install -r requirements.txt
-  python3 -m uvicorn app:app --host 0.0.0.0 --port 8082 --reload --timeout-keep-alive 600
+  python3 -m uvicorn app:app --host 0.0.0.0 --port 8080 --reload --timeout-keep-alive 600
   ```
 - using docker
   ```
   docker build -t tts:latest .
-  docker run -d -p 8082:8082 tts:latest
+  docker run -d -p 8080:80 tts:latest
   ```
 ## Execute
 
